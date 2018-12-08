@@ -1,0 +1,12 @@
+# build docker image
+docker build -t fake-pairs .
+
+# launch docker image & attach volume & launch bash
+docker run -v /input:/input -v /path/to/output:/output -v /misc:/misc --privileged  fake-pairs
+# or launch something from docker
+docker run -v /input:/input -v /output:/output -v /misc:/misc --privileged  \
+fake-pairs python3 /path/to/file.py arguments
+
+# flag "-v /input:/input" - attach volume to docker
+# flag "-it" - interactive
+# flag "--rm" - ` automatically clean up the container and remove the file system when the container exits`
