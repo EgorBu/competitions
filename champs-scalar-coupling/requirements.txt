@@ -1,0 +1,16 @@
+torch
+torchvision
+```
+$ python -c "import torch; print(torch.__version__)"
+>>> 1.1.0
+
+$ echo $PATH
+>>> /usr/local/cuda/bin:...
+
+$ echo $CPATH
+>>> /usr/local/cuda/include:...```
+torch-scatter==1.1.1
+torch-sparse
+torch-cluster
+torch-spline-conv
+torch-geometric
